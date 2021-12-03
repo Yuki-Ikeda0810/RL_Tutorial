@@ -14,6 +14,7 @@
     1. [Gym](#1-gym)
     2. [SARSA](#2-sarsa)
     3. [Q-Learning](#3-q-learning)
+    4. [Deep Q-Network(DQN)](#3-deep-q-network(DQN))
 
 <br>
 
@@ -70,3 +71,5 @@ $ python3 -m pip install 'gym[all]'
 ### 2. SARSA
 
 ### 3. Q-Learning
+
+### 4. Deep Q-Network(DQN)
