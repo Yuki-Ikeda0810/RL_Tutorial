@@ -10,7 +10,7 @@
     1. [動作環境](#1-動作環境)
     2. [必要ライブラリのインストール](#2-必要ライブラリのインストール)
 
-2. [**Reinforcement Learning Tutorial**](#開発の進め方)
+2. [**強化学習チュートリアル**](#強化学習チュートリアル)
     1. [Gym](#1-gym)
     2. [SARSA](#2-sarsa)
     3. [Q-Learning](#3-q-learning)
@@ -43,6 +43,11 @@ $ python3 -m pip install --upgrade pip
 $ python3 -m pip install numpy
 ```
 
+「matplotlib」をインストールします．
+```bash
+$ python3 -m pip install matplotlib
+```
+
 「Pytorch」をインストールします．
 ```bash
 $ python3 -m pip install torch
@@ -56,12 +61,9 @@ $ python3 -m pip install gym
 $ python3 -m pip install 'gym[all]'
 ```
 
-「matplotlib」をインストールします．
-```bash
-$ python3 -m pip install matplotlib
-```
+<br>
 
-## **Reinforcement Learning Tutorial**
+## **強化学習チュートリアル**
 
 ### 1. Gym
 
