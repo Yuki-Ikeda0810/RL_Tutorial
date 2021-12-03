@@ -2,57 +2,69 @@
 
 様々な強化学習(Reinforcement Learning)手法をまとめたチュートリアル用のリポジトリです．
 
+<br>
+
 ## **目次**
 
 1. [**開発環境について**](#開発環境について)
-    1. [Ubuntu](#1-ubuntu)
-    2. [ROS](#2-ros)
-    3. [Docker](#3-docker)
+    1. [動作環境](#1-動作環境)
+    2. [必要ライブラリのインストール](#2-必要ライブラリのインストール)
 
----
+2. [**Reinforcement Learning Tutorial**](#開発の進め方)
+    1. [Gym](#1-gym)
+    2. [SARSA](#2-sarsa)
+    3. [Q-Learning](#3-q-learning)
 
-2. [**開発の進め方**](#開発の進め方)
-    1. [コーディングスタイル](#1-コーディングスタイル)
-    2. [Gitの使用方法](#2-gitの使用方法)
-    3. [Gitの命名規則](#3-gitの命名規則)
-    4. [Dockerの使用方法](#4-dockerの使用方法)
-    5. [Docker Workspaceの使用方法](#5-docker-workspaceの使用方法)
-    6. [ROSの使用方法](#6-rosの使用方法)
-
----
-
-3. [**SOBITSのロボットについて**](#sobitsのロボットについて)
-    1. <a href="https://gitlab.com/TeamSOBITS/sobit_education" target="_blank">SOBIT EDUを動かす</a>
-    2. <a href="https://gitlab.com/TeamSOBITS/sobit_mini" target="_blank">SOBIT MINIを動かす</a>
-    3. <a href="https://gitlab.com/TeamSOBITS/sobit_pro" target="_blank">SOBIT PROを動かす</a>
+<br>
 
 ## **開発環境について**
+
+### 1. 動作環境
+
 以下の開発環境で動作させることを想定しています．
-- Ubuntu : 18.04
-- Python : 2.7-3.6 (デフォルト:2.7)
+- Ubuntu     : 18.04
+- Python     : 3.6
+- NumPy      : 1.19.5
+- Pytorch    : 1.9.1 (+cu102)
+- OpenAI Gym : 0.21.0
 
+### 2. 必要ライブラリのインストール
 
-pipで強化学習ライブラリ「OpenAI Gym」をインストールする手順は下記の通りです。
+Reinforcement Learning Tutorialに必要なライブラリをインストールする必要があります．
+コマンドプロンプトを起動して，以下のコマンドを実行してください．
 
-コマンドプロンプトを起動します。
-
-下記のコマンドを実行し、念のためにpipをアップデートします。
+「pip」をアップデートします(念のため)．
 ```bash
 $ python3 -m pip install --upgrade pip
 ```
 
-下記のコマンドを実行し、「OpenAI Gym」をインストールします。
+「Numpy」をインストールします．
 ```bash
-$ python3 -m pip install gym
+$ python3 -m pip install numpy
 ```
 
-「Atari社のゲーム」やその他の追加機能をフルで入れる場合は以下のコマンドを実行します。
+「Pytorch」をインストールします．
 ```bash
+$ python3 -m pip install torch
+$ python3 -m pip install torchvision
+$ python3 -m pip install tqdm
+```
+
+「OpenAI Gym」をインストールします．
+```bash
+$ python3 -m pip install gym
 $ python3 -m pip install 'gym[all]'
 ```
 
-下記のサンプルプログラムが実行できればインストール成功です。
+「matplotlib」をインストールします．
+```bash
+$ python3 -m pip install matplotlib
 ```
-$ python3
-$ import gym
-```
+
+## **Reinforcement Learning Tutorial**
+
+### 1. Gym
+
+### 2. SARSA
+
+### 3. Q-Learning
