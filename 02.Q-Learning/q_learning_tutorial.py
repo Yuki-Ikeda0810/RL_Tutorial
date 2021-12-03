@@ -63,7 +63,6 @@ def discretize_state(observation, num_discretize):
 """
 
 for episode in range(num_episode):
-
     observation = env.reset()                             # エピソードを開始(環境の初期化)．
     state = discretize_state(observation, num_discretize) # 観測の離散化(状態のインデックスを取得)．
     
@@ -86,7 +85,7 @@ for episode in range(num_episode):
 
     episode_rewards.append(episode_reward)
     if episode % 50 == 0:
-        print("Episode %d finished | Episode reward %f" % (episode, episode_reward))
+        print("Episode %3d finished | Episode reward %8f" % (episode, episode_reward))
 
 # 累積報酬の移動平均を表示．
 moving_average = np.convolve(episode_rewards, np.ones(num_average_epidodes)/num_average_epidodes, mode='valid')
@@ -110,14 +109,12 @@ env = wrappers.Monitor(env, "./movie", force=True)
 
 # 5回のエピソードをシミュレーターで動作させる．
 for i_episode in range(5):
-
     observation = env.reset()                             # エピソードを開始(環境の初期化)．
     state = discretize_state(observation, num_discretize) # 観測の離散化(状態のインデックスを取得)．
     env.render()                                          # シミュレータ画面の出力．
 
     done = False
     while not done:
-
         action = agent.get_greedy_action(state)                    # エージェントによる行動を取得．
         next_observation, reward, done, _ = env.step(action)       # 行動を実行し，次の状態，報酬，終端か否かの情報を取得．
         state = discretize_state(next_observation, num_discretize) # 観測の離散化(状態のインデックスを取得)．
