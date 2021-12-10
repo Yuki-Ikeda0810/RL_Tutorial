@@ -14,7 +14,7 @@
 
 ### [**2. シミュレータチュートリアル**](#シミュレータチュートリアル)
 1. [CartPole](#1-cartpole)
-2. [aaa](#2-aaa)
+2. [Pendulum](#2-pendulum)
 
 ### [**3. 強化学習チュートリアル**](#強化学習チュートリアル)
 　**＜価値に基づく手法(Value-based Methods)＞**
@@ -83,7 +83,7 @@ $ python3 -m pip install gym
 
 ### 1. CartPole
 
-### 2. aaa
+### 2. Pendulum
 
 <br>
 
