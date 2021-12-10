@@ -8,15 +8,29 @@
 
 ## **目次**
 
-1. [**開発環境について**](#開発環境について)
-    1. [動作環境](#1-動作環境)
-    2. [必要ライブラリのインストール](#2-必要ライブラリのインストール)
+#### [**【開発環境について】**](#開発環境について)
+1. [動作環境](#1-動作環境)
+2. [必要ライブラリのインストール](#2-必要ライブラリのインストール)
 
-2. [**強化学習チュートリアル**](#強化学習チュートリアル)
-    1. [Gym](#1-gym)
-    2. [SARSA](#2-sarsa)
-    3. [Q-Learning](#3-q-learning)
-    4. [Deep Q-Network(DQN)](#4-deep-q-networkdqn)
+#### [**【シミュレータチュートリアル】**](#シミュレータチュートリアル)
+1. [CartPole](#1-cartpole)
+2. [aaa](#2-aaa)
+
+#### [**【強化学習チュートリアル】**](#強化学習チュートリアル)
+1. 価値に基づく手法(Value-based Methods)
+    1. テーブル解法
+        1. [SARSA](#2-sarsa)
+        2. [Q-Learning](#3-q-learning)
+    2. NNによる価値関数の近似
+        1. [Deep Q-Network(DQN)](#4-deep-q-networkdqn)
+2. 方策に基づく手法(Policy-based Methods)
+    1. 方策勾配法：方策の近似
+        1. REINFORCE
+    2. Actor-Critic：方策と価値関数の近似
+        1. Actor-Criticの実装例
+    1. 連続値行動空間
+        1. 連続値行動空間の環境の例：pendulum-v0
+        2. Deep Deterministic Policy Gradient(DDPG)
 
 <br>
 
@@ -61,8 +75,15 @@ $ python3 -m pip install tqdm
 「OpenAI Gym」をインストールします．
 ```bash
 $ python3 -m pip install gym
-$ python3 -m pip install 'gym[all]'
 ```
+
+<br>
+
+## **シミュレータチュートリアル**
+
+### 1. CartPole
+
+### 2. aaa
 
 <br>
 
