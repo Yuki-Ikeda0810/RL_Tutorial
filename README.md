@@ -18,18 +18,18 @@
 
 ### [**3. 強化学習チュートリアル**](#強化学習チュートリアル)
 　**＜価値に基づく手法(Value-based Methods)＞**
-1. テーブル解法
+1. テーブル解法による手法
     1. [SARSA](#1-sarsa)
     2. [Q-Learning](#2-q-learning)
-2. NNによる価値関数の近似
+2. NNによる価値関数の近似による手法
     1. [Deep Q-Network(DQN)](#3-deep-q-networkdqn)
 
 　**＜方策に基づく手法(Policy-based Methods)＞**
-1. 方策勾配法：方策の近似
+1. 方策の近似による手法(方策勾配法)
     1. [REINFORCE](#4-reinforce)
-2. Actor-Critic：方策と価値関数の近似
+2. 方策と価値関数の近似による手法
     1. [Actor-Critic](#5-actor-critic)
-1. 連続値行動空間
+1. 連続値行動空間に対する手法
     1. [Deep Deterministic Policy Gradient(DDPG)](#6-deep-deterministic-policy-gradientddpg)
 
 <br>
