@@ -2,7 +2,7 @@
 
 
 """ OpenAI Gymと呼ばれる，強化学習のシミュレータのライブラリを用いて環境を作成します．
-    今回は，Pendulum-v1と呼ばれる，台車に振子がついた環境を利用します．
+    今回は，Pendulum-v1と呼ばれる，1回転する振り子を用いた環境を利用します．
     参考：https://github.com/openai/gym/wiki/Pendulum-v0
 """
 
