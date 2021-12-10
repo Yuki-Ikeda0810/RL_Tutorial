@@ -2,8 +2,8 @@
 
 
 """ OpenAI Gymと呼ばれる，強化学習のシミュレータのライブラリを用いて環境を作成します．
-    今回は，CartPole-v0と呼ばれる，台車に振子がついた環境を利用します．
-    参考：https://github.com/openai/gym/wiki/CartPole-v0
+    今回は，Pendulum-v1と呼ばれる，台車に振子がついた環境を利用します．
+    参考：https://github.com/openai/gym/wiki/Pendulum-v0
 """
 
 # 必要なライブラリのインポート．
@@ -11,11 +11,11 @@ import gym
 from gym import wrappers
 
 # シミュレータ環境の構築．
-env = gym.make('CartPole-v0')
+env = gym.make('Pendulum-v1')
 env = wrappers.Monitor(env, "./movie", force=True)
 
-# 5回のエピソードをシミュレーターで動作させる．
-for i_episode in range(5):
+# 3回のエピソードをシミュレーターで動作させる．
+for i_episode in range(3):
 
     # エピソードを開始(環境の初期化)．
     state = env.reset()
