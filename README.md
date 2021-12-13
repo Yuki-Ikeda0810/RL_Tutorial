@@ -77,6 +77,11 @@ $ python3 -m pip install tqdm
 $ python3 -m pip install gym
 ```
 
+「PyBullet」をインストールします．
+```bash
+$ python3 -m pip install pybullet==3.0.8
+```
+
 <br>
 
 ## **シミュレータチュートリアル**
