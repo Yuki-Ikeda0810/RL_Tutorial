@@ -37,7 +37,7 @@ agent = ddpg_agent.DdpgAgent(env.observation_space, env.action_space, memory_siz
 
 
 """ Actor-Criticエージェントの学習
-    今回は，エージェントの学習に，Pendulum-v0と呼ばれる，台車に振子がついた環境を利用します．
+    今回は，エージェントの学習に，OpenAI GymのPendulum-v0と呼ばれる，台車に振子がついた環境を利用します．
     参考：https://github.com/openai/gym/wiki/Pendulum-v0
 """
 

@@ -58,7 +58,7 @@ def discretize_state(observation, num_discretize):
 
 
 """ Q-Learningエージェントの学習
-    今回は，エージェントの学習に，CartPole-v0と呼ばれる，台車に振子がついた環境を利用します．
+    今回は，エージェントの学習に，OpenAI GymのCartPole-v0と呼ばれる，台車に振子がついた環境を利用します．
     参考：https://github.com/openai/gym/wiki/CartPole-v0
 """
 

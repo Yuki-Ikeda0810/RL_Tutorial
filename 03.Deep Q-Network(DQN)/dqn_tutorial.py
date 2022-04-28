@@ -38,7 +38,7 @@ agent = dqn_agent.DqnAgent(env.observation_space.shape[0], env.action_space.n, m
 
 
 """ DQNエージェントの学習
-    今回は，エージェントの学習に，CartPole-v0と呼ばれる，台車に振子がついた環境を利用します．
+    今回は，エージェントの学習に，OpenAI GymのCartPole-v0と呼ばれる，台車に振子がついた環境を利用します．
     参考：https://github.com/openai/gym/wiki/CartPole-v0
 """
 
