@@ -35,15 +35,14 @@ for i_episode in range(episode):
         env.render()
 
         # ランダムな行動を選択．
-        # 0 : カートを左へ．
-        # 1 : カートを右へ．
+        # 0, 1 : カートを左へ, カートを右へ : 1次元の離散値．
         action = env.action_space.sample()
 
         # 行動を実行し，次の状態，報酬，終端か否かの情報を取得．
-        # next_state : (カートの位置(-4.8 4.8)，カートの速度(-Inf Inf)，ポールの角度(-24 deg 24 deg)，ポールの角速度(-Inf Inf))．
-        # reward : 前の行動によって達成された報酬の量．
-        # done : 環境をリセットするべきかの判断(True : ゲームオーバー、False : コンティニュー)．
-        # info : デバッグに役立つ診断情報．
+        # next_state : カートの位置(-4.8 4.8)，カートの速度(-Inf Inf)，ポールの角度(-24 deg 24 deg)，ポールの角速度(-Inf Inf) : 4次元の連続値．
+        # reward     : 前の行動によって達成された報酬の量．
+        # done       : 環境をリセットするべきかの判断(True : ゲームオーバー、False : コンティニュー)．
+        # info       : デバッグに役立つ診断情報．
         next_state, reward, done, info = env.step(action)
 
     print("Episode %d finished" % (i_episode+1))

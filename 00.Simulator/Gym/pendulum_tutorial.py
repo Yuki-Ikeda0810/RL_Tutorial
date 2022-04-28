@@ -35,14 +35,14 @@ for i_episode in range(episode):
         env.render()
 
         # ランダムな行動を選択．
-        # -2.0 〜 2.0 : ジョイントへの力．
+        # -2.0 〜 2.0 : ジョイントへの力 : 1次元の連続値．
         action = env.action_space.sample()
 
         # 行動を実行し，次の状態，報酬，終端か否かの情報を取得．
-        # next_state : (ジョイントのx座標(cos)(-1.0 1.0)，ジョイントのy座標(sin)(-1.0 1.0)，ジョイントの角速度(-8.0 8.0))．
-        # reward : 前の行動によって達成された報酬の量．
-        # done : 環境をリセットするべきかの判断(True : ゲームオーバー、False : コンティニュー)．
-        # info : デバッグに役立つ診断情報．
+        # next_state : ジョイントのx座標(cos)(-1.0 1.0)，ジョイントのy座標(sin)(-1.0 1.0)，ジョイントの角速度(-8.0 8.0) : 3次元の連続値．
+        # reward     : 前の行動によって達成された報酬の量．
+        # done       : 環境をリセットするべきかの判断(True : ゲームオーバー、False : コンティニュー)．
+        # info       : デバッグに役立つ診断情報．
         next_state, reward, done, info = env.step(action)
 
     print("Episode %d finished" % (i_episode+1))
