@@ -90,6 +90,10 @@ $ python3 -m pip install pybullet==3.0.8
 
 ### 2. Pendulum
 
+### 3. Inverted Pendulum
+
+### 4. Half Cheetah
+
 <br>
 
 ## **強化学習チュートリアル**
