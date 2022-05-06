@@ -100,16 +100,56 @@ $ python3 -m pip install pybullet==3.0.8
 
 ### 1. SARSA
 
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 sarsa_tutorial.py
+```
+
 ### 2. Q-Learning
+
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 q_learning_tutorial.py
+```
 
 ### 3. Deep Q-Network (DQN)
 
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 dqn_tutorial.py
+```
+
 ### 4. REINFORCE
+
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 reinforce_tutorial.py
+```
 
 ### 5. Actor-Critic
 
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 actor_critic_tutorial.py
+```
+
 ### 6. Deep Deterministic Policy Gradient (DDPG)
+
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 ddpg_tutorial.py
+```
 
 ### 7. Proximal Policy Optimization (PPO)
 
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 ppo_tutorial.py
+```
+
 ### 8. Soft Actor-Critic (SAC)
+
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 sac_tutorial.py
+```
