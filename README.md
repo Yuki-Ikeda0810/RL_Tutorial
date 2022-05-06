@@ -102,14 +102,14 @@ $ python3 -m pip install pybullet==3.0.8
 
 ### 2. Q-Learning
 
-### 3. Deep Q-Network(DQN)
+### 3. Deep Q-Network (DQN)
 
 ### 4. REINFORCE
 
 ### 5. Actor-Critic
 
-### 6. Deep Deterministic Policy Gradient(DDPG)
+### 6. Deep Deterministic Policy Gradient (DDPG)
 
-### 7. Proximal Policy Optimization(PPO)
+### 7. Proximal Policy Optimization (PPO)
 
-### 8. Soft Actor-Critic(SAC)
+### 8. Soft Actor-Critic (SAC)
