@@ -109,3 +109,7 @@ $ python3 -m pip install pybullet==3.0.8
 ### 5. Actor-Critic
 
 ### 6. Deep Deterministic Policy Gradient(DDPG)
+
+### 7. Proximal Policy Optimization(PPO)
+
+### 8. Soft Actor-Critic(SAC)
