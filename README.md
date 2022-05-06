@@ -88,11 +88,31 @@ $ python3 -m pip install pybullet==3.0.8
 
 ### 1. CartPole
 
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 cartpole_tutorial.py
+```
+
 ### 2. Pendulum
+
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 pendulum_tutorial.py
+```
 
 ### 3. Inverted Pendulum
 
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 inverted_pendulum_tutorial.py
+```
+
 ### 4. Half Cheetah
+
+以下のコマンドを実行することで学習します．
+```bash
+$ python3 half_cheetah_tutorial.py
+```
 
 <br>
 
