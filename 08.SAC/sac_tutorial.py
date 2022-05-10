@@ -32,7 +32,7 @@ REWARD_SCALE  = 5.0
 NUM_STEPS     = 1000000 # 学習ステップ数(10 ** 6)
 EVAL_INTERVAL = 10000   # 学習の更新ステップ数(10 ** 4)
 
-video_trigger   = 10 # 動画を保存する間隔の指定(エピソード数)．
+video_trigger   = 1 # 動画を保存する間隔の指定(エピソード数)．
 
 
 """ 各種定義
@@ -47,8 +47,8 @@ env = gym.make(ENV_ID)
 env_test = gym.make(ENV_ID)
 
 # シミュレーションを動画で保存する．
-# env = gym.wrappers.RecordVideo(env,'./movie', episode_trigger=(lambda ep: ep % video_trigger == 0))
-env = gym.wrappers.Monitor(env, './movie', video_callable=(lambda ep: ep % video_trigger == 0))
+env = gym.wrappers.RecordVideo(env,'./movie', episode_trigger=(lambda ep: ep % video_trigger == 0))
+# env = gym.wrappers.Monitor(env, './movie', video_callable=(lambda ep: ep % video_trigger == 0))
 
 # SACのインスタンスを生成．
 algo = sac_agent.SAC(state_shape=env.observation_space.shape,
@@ -59,11 +59,11 @@ algo = sac_agent.SAC(state_shape=env.observation_space.shape,
 
 # Trainerのインスタンスを生成．
 trainer = Trainer(env=env,
-                          env_test=env_test,
-                          algo=algo,
-                          seed=SEED,
-                          num_steps=NUM_STEPS,
-                          eval_interval=EVAL_INTERVAL,
+                  env_test=env_test,
+                  algo=algo,
+                  seed=SEED,
+                  num_steps=NUM_STEPS,
+                  eval_interval=EVAL_INTERVAL,
 )
 
 
@@ -73,6 +73,11 @@ trainer = Trainer(env=env,
 """
 
 trainer.train()
+
+del env
+del env_test
+del algo
+del trainer
 
 # """ 最終的に得られた方策のテスト(可視化)
 #     5回のエピソードをシミュレーターで動作させ，学習後のエージェントの方策を可視化します．
