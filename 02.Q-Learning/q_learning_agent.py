@@ -9,14 +9,12 @@
 import numpy as np
 
 
-""" Q-Learning
+""" QLearningAgentクラス
     今回は，方策としてε-greedy方策を用います．
     この実装ではエピソードが途中で終了した場合はペナルティを本来の報酬から引いています．
     テーブルを用いてQ関数を表現した場合，学習効率が悪く不安定になりがちなためです．
     このような，学習を容易にするための追加的な報酬の設計をreward shapingといいます．
 """
-
-# Q-Learningエージェントのクラス．
 class QLearningAgent:
     def __init__(self, num_state, num_action, num_discretize, gamma=0.99, alpha=0.5, max_initial_q=0.1):
 

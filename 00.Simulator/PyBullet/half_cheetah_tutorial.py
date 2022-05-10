@@ -12,8 +12,8 @@ import gym
 import pybullet_envs
 
 # シミュレーションの設定．
-episode = 3        # エピソード回数の指定．
-video_trigger = 1  # 動画を保存する間隔の指定(エピソード数)．
+episode       = 3 # エピソード回数の指定．
+video_trigger = 1 # 動画を保存する間隔の指定(エピソード数)．
 
 # Gymの警告を一部無視する．
 gym.logger.set_level(40)
