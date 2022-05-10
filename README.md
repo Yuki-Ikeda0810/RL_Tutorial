@@ -44,6 +44,7 @@
 - NumPy      : 1.19.5
 - Pytorch    : 1.9.1 (+cu102)
 - OpenAI Gym : 0.21.0
+- PyBullet   : 3.0.8
 
 ### 2. 必要ライブラリのインストール
 
@@ -74,7 +75,7 @@ $ python3 -m pip install tqdm
 
 「OpenAI Gym」をインストールします．
 ```bash
-$ python3 -m pip install gym
+$ python3 -m pip install gym==0.21.0
 ```
 
 「PyBullet」をインストールします．
