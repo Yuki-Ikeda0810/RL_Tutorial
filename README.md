@@ -88,28 +88,32 @@ $ python3 -m pip install pybullet==3.0.8
 
 ### 1. CartPole
 
-以下のコマンドを実行することで学習します．
+「RL_Tutorial/00.Simulator/Gym」のディレクトリ階層まで移動します．
+以下のコマンドを実行することでシミュレータを動かします．
 ```bash
 $ python3 cartpole_tutorial.py
 ```
 
 ### 2. Pendulum
 
-以下のコマンドを実行することで学習します．
+「RL_Tutorial/00.Simulator/Gym」のディレクトリ階層まで移動します．
+以下のコマンドを実行することでシミュレータを動かします．
 ```bash
 $ python3 pendulum_tutorial.py
 ```
 
 ### 3. Inverted Pendulum
 
-以下のコマンドを実行することで学習します．
+「RL_Tutorial/00.Simulator/PyBullet」のディレクトリ階層まで移動します．
+以下のコマンドを実行することでシミュレータを動かします．
 ```bash
 $ python3 inverted_pendulum_tutorial.py
 ```
 
 ### 4. Half Cheetah
 
-以下のコマンドを実行することで学習します．
+「RL_Tutorial/00.Simulator/PyBullet」のディレクトリ階層まで移動します．
+以下のコマンドを実行することでシミュレータを動かします．
 ```bash
 $ python3 half_cheetah_tutorial.py
 ```
@@ -120,6 +124,7 @@ $ python3 half_cheetah_tutorial.py
 
 ### 1. SARSA
 
+「RL_Tutorial/01.SARSA」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 sarsa_tutorial.py
@@ -127,6 +132,7 @@ $ python3 sarsa_tutorial.py
 
 ### 2. Q-Learning
 
+「RL_Tutorial/02.Q-Learning」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 q_learning_tutorial.py
@@ -134,6 +140,7 @@ $ python3 q_learning_tutorial.py
 
 ### 3. Deep Q-Network (DQN)
 
+「RL_Tutorial/03.DQN」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 dqn_tutorial.py
@@ -141,6 +148,7 @@ $ python3 dqn_tutorial.py
 
 ### 4. REINFORCE
 
+「RL_Tutorial/04.REINFORCE」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 reinforce_tutorial.py
@@ -148,6 +156,7 @@ $ python3 reinforce_tutorial.py
 
 ### 5. Actor-Critic
 
+「RL_Tutorial/05.Actor-Critic」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 actor_critic_tutorial.py
@@ -155,6 +164,7 @@ $ python3 actor_critic_tutorial.py
 
 ### 6. Deep Deterministic Policy Gradient (DDPG)
 
+「RL_Tutorial/06.DDPG」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 ddpg_tutorial.py
@@ -162,6 +172,7 @@ $ python3 ddpg_tutorial.py
 
 ### 7. Proximal Policy Optimization (PPO)
 
+「RL_Tutorial/07.PPO」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 ppo_tutorial.py
@@ -169,6 +180,7 @@ $ python3 ppo_tutorial.py
 
 ### 8. Soft Actor-Critic (SAC)
 
+「RL_Tutorial/08.SAC」のディレクトリ階層まで移動します．
 以下のコマンドを実行することで学習します．
 ```bash
 $ python3 sac_tutorial.py
