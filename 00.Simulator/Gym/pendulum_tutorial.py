@@ -25,7 +25,6 @@ env = gym.wrappers.RecordVideo(env,'./movie')
 """ シミュレーション チュートリアル
     指定したエピソード数分，シミュレータを動作させます．
 """
-
 for i_episode in range(1, episode+1):
 
     # エピソードを開始(環境の初期化)．
