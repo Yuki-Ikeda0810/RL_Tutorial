@@ -9,21 +9,24 @@
 # 必要なライブラリのインポート．
 import gym
 
-# シミュレーションの設定．
-episode       = 3 # エピソード回数の指定．
-video_trigger = 1 # 動画を保存する間隔の指定(エピソード数)．
+# エピソード回数の指定．
+episode = 3 
 
-# Gymの警告を一部無視する．
+# Gymの警告を一部無視．
 gym.logger.set_level(40)
 
 # シミュレータ環境の構築．
 env = gym.make('CartPole-v0')
 
-# シミュレーションを動画で保存する．
-env = gym.wrappers.RecordVideo(env,'./movie', episode_trigger=(lambda ep: ep % video_trigger == 0))
+# シミュレーションを動画として保存する設定．
+env = gym.wrappers.RecordVideo(env,'./movie')
 
-# 指定したエピソード数分，シミュレータを動作させる．
-for i_episode in range(episode):
+
+""" シミュレーション チュートリアル
+    指定したエピソード数分，シミュレータを動作させます．
+"""
+
+for i_episode in range(1, episode+1):
     
     # エピソードを開始(環境の初期化)．
     state = env.reset()
@@ -45,7 +48,7 @@ for i_episode in range(episode):
         # info       : デバッグに役立つ診断情報．
         next_state, reward, done, info = env.step(action)
 
-    print("Episode %d finished" % (i_episode+1))
+    print("Episode %d finished" % (i_episode))
 
 # 画面出力の終了．
 env.close()
