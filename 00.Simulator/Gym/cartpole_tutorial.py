@@ -10,7 +10,10 @@
 import gym
 
 # エピソード回数の指定．
-episode = 3 
+episode = 4
+
+# 動画を保存する間隔の指定(エピソード数)．
+video_trigger = 2
 
 # Gymの警告を一部無視．
 gym.logger.set_level(40)
@@ -19,7 +22,7 @@ gym.logger.set_level(40)
 env = gym.make('CartPole-v0')
 
 # シミュレーションを動画として保存する設定．
-env = gym.wrappers.RecordVideo(env,'./movie')
+env = gym.wrappers.RecordVideo(env,'./movie', episode_trigger=(lambda ep: ep % video_trigger == 0))
 
 
 """ シミュレーション チュートリアル
