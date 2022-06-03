@@ -30,11 +30,11 @@ for i_episode in range(1, episode+1):
     # エピソードを開始(環境の初期化)．
     state = env.reset()
 
+    # シミュレータ画面の出力．
+    env.render()
+
     done = False
     while not done:
-
-        # シミュレータ画面の出力．
-        env.render()
 
         # ランダムな行動を選択．
         # -2.0 〜 2.0 : ジョイントへの力 : 1次元の連続値．

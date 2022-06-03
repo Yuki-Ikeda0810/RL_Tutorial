@@ -14,7 +14,7 @@ import pybullet_envs
 # エピソード回数の指定．
 episode = 3
 
-# Gymの警告を一部無視する．
+# Gymの警告を一部無視．
 gym.logger.set_level(40)
 
 # シミュレータ環境の構築．
@@ -30,6 +30,7 @@ env = gym.wrappers.RecordVideo(env,'./movie')
 for i_episode in range(1, episode+1):
 
     # シミュレータ画面の出力．
+    # PyBulletでは「render」を呼ぶタイミングがGymと異なる．
     env.render()
 
     # エピソードを開始(環境の初期化)．
