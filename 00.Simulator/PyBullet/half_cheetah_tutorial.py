@@ -58,3 +58,6 @@ for i_episode in range(1, episode+1):
 
 # 画面出力の終了．
 env.close()
+
+# 生成したインスタンスの削除
+del env
