@@ -10,7 +10,7 @@ import gym
 import pybullet_envs
 import torch
 
-import sac_agent                       #「sac_agent.py」をインポート．
+import ppo_agent                       #「ppo_agent.py」をインポート．
 from calculation import reparameterize #「calculation.py」の「reparameterize」関数をインポート．
 
 
@@ -56,18 +56,18 @@ def main():
     if save_video:
         env = gym.wrappers.RecordVideo(env,'./movie/test', episode_trigger=(lambda ep: ep % video_trigger == 0))
 
-    # SACのインスタンスを生成．
-    algo = sac_agent.SAC(state_shape=env.observation_space.shape,
-                         action_shape=env.action_space.shape,
-                         seed=SEED,
-                         reward_scale=REWARD_SCALE
+    # PPOのインスタンスを生成．
+    algo = ppo_agent.PPO(state_shape=env.observation_space.shape,
+                        action_shape=env.action_space.shape,
+                        seed=SEED,
+                        reward_scale=REWARD_SCALE
     )
 
     # 学習したエージェントの読み込み．
     algo.actor.load_state_dict(torch.load('./agent/' + AGENT_NAME))
 
 
-    """ 学習したSACエージェントのシミュレーション
+    """ 学習したPPOエージェントのシミュレーション
         指定したエピソード数分，シミュレータを動作させます．
     """
     for i_episode in range(1, episode+1):

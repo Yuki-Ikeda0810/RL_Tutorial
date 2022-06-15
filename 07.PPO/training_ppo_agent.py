@@ -3,14 +3,14 @@
 
 """ 方策に基づく手法 (Policy-based Methods)
     今回は，方策に基づく手法の1つとして，方策と価値関数の近似した
-    Soft Actor-Critic(SAC)を扱います．
+    Proximal Policy Optimization(PPO)を扱います．
 """
 
 # 必要なライブラリのインポート．
 import gym
 import pybullet_envs
 
-import sac_agent             #「sac_agent.py」をインポート．
+import ppo_agent             #「ppo_agent.py」をインポート．
 from trainer import Trainer  #「training.py」の「Trainer」クラスをインポート．
 
 
@@ -64,8 +64,8 @@ def main():
     if save_video:
         env = gym.wrappers.RecordVideo(env,'./movie/training', episode_trigger=(lambda ep: ep % video_trigger == 0))
 
-    # SACのインスタンスを生成．
-    algo = sac_agent.SAC(state_shape=env.observation_space.shape,
+    # PPOのインスタンスを生成．
+    algo = ppo_agent.PPO(state_shape=env.observation_space.shape,
                          action_shape=env.action_space.shape,
                          seed=SEED,
                          start_episodes=START_EPISODES,
@@ -85,13 +85,13 @@ def main():
     )
 
 
-    """ SACエージェントの学習
-        上記で設定したパラメータを用いて，SACエージェントの学習を行います．
+    """ PPOエージェントの学習
+        上記で設定したパラメータを用いて，PPOエージェントの学習を行います．
     """
-    # SACエージェントの学習．
+    # PPOエージェントの学習．
     trainer.train()
 
-    # SACエージェントの学習結果を表示．
+    # PPOエージェントの学習結果を表示．
     # trainer.visualize() # 1エピソード分のシミュレーション．
     trainer.plot()        # 学習曲線の表示．
 

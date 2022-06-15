@@ -105,9 +105,9 @@ class SAC(Algorithm):
 
         # リプレイバッファ．
         self.buffer = ReplayBuffer(buffer_size=replay_size,
-                                            state_shape=state_shape,
-                                            action_shape=action_shape,
-                                            device=device,
+                                   state_shape=state_shape,
+                                   action_shape=action_shape,
+                                   device=device
         )
 
         """Actor-Criticのネットワークを構築

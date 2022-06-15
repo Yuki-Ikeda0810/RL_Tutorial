@@ -2,7 +2,7 @@
 
 
 """ Replay Bufferクラス
-    状態・行動・即時報酬・終了シグナル・次の状態をGPU上に保存します．
+    状態・行動・即時報酬・終了シグナル・次の状態を保存します．
 """
 
 # 必要なライブラリのインポート．
@@ -26,7 +26,7 @@ class ReplayBuffer:
         # リプレイバッファのサイズ．
         self.buffer_size = buffer_size
 
-        # GPU上に保存するデータ．
+        # 保存するデータ．
         self.states = torch.empty((buffer_size, *state_shape), dtype=torch.float, device=device)
         self.actions = torch.empty((buffer_size, *action_shape), dtype=torch.float, device=device)
         self.rewards = torch.empty((buffer_size, 1), dtype=torch.float, device=device)
@@ -44,7 +44,8 @@ class ReplayBuffer:
         self._p = (self._p + 1) % self.buffer_size
         self._n = min(self._n + 1, self.buffer_size)
     
-    # 指定されたバッチサイズのミニバッチをReplay Bufferから返す関数．
+    # 指定されたバッチサイズのミニバッチとして，
+    # Replay Bufferから状態・行動・即時報酬・終了シグナル・次の状態を返す関数．
     def sample(self, batch_size):
         idxes = np.random.randint(low=0, high=self._n, size=batch_size)
         return (
