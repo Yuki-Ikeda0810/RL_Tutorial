@@ -40,6 +40,7 @@ for i_episode in range(1, episode+1):
     # エピソードを開始(環境の初期化)．
     state = env.reset()
 
+    # エピソードの終了条件まで繰り返す．
     done = False
     while not done:
 

@@ -37,6 +37,7 @@ for i_episode in range(1, episode+1):
     # シミュレータ画面の出力．
     env.render()
 
+    # エピソードの終了条件まで繰り返す．
     done = False
     while not done:
 
