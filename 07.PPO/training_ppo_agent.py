@@ -25,20 +25,16 @@ def main():
     # 参考：https://github.com/bulletphysics/bullet3
     ENV_ID             =  'InvertedPendulumBulletEnv-v0'
     SEED               =  0       # 乱数を生成する設定値(再現性のある乱数を獲得できる)．
-    START_EPISODES     =  400     # 学習初期のランダムな行動をするエピソード数．
-    REWARD_SCALE       =  1.0     # 報酬の大きさ．
-    NUM_EPISODES       =  600     # 学習エピソード数()，ステップ数(5 * 10 ** 4)．
-    EVAL_INTERVAL      =  10      # 評価までのエピソード数()，ステップ数(10 ** 3)．
+    NUM_EPISODES       =  1000     # 学習エピソード数())．
+    EVAL_INTERVAL      =  10      # 評価までのエピソード数()．
     NUM_EVAL_EPISODES  =  3       # 評価時のエピソード数．
 
     # Half Cheetahと呼ばれる4足歩行のチータが半身(2足歩行)になった環境を利用する場合の設定．
     # 参考：https://github.com/bulletphysics/bullet3
     # ENV_ID             =  'HalfCheetahBulletEnv-v0'
     # SEED               =  0       # 乱数を生成する設定値(再現性のある乱数を獲得できる)．
-    # START_EPISODES     =  10      # 学習初期のランダムな行動をするエピソード数．
-    # REWARD_SCALE       =  5.0     # 報酬の大きさ．
-    # NUM_EPISODES       =  1000    # 学習エピソード数()，ステップ数(10 ** 6)．
-    # EVAL_INTERVAL      =  20      # 評価までのエピソード数()，ステップ数(10 ** 4)．
+    # NUM_EPISODES       =  1000    # 学習エピソード数()．
+    # EVAL_INTERVAL      =  20      # 評価までのエピソード数()．
     # NUM_EVAL_EPISODES  =  3       # 評価時のエピソード数．
 
     # 保存する動画の設定．
@@ -68,8 +64,6 @@ def main():
     algo = ppo_agent.PPO(state_shape=env.observation_space.shape,
                          action_shape=env.action_space.shape,
                          seed=SEED,
-                         start_episodes=START_EPISODES,
-                         reward_scale=REWARD_SCALE
     )
 
     # Trainerのインスタンスを生成．
