@@ -45,7 +45,7 @@ for i_episode in range(1, episode+1):
     while not done:
 
         # ランダムな行動を選択．
-        # 1.0 〜 1.0 : 各ジョイントへの力 : 6次元の連続値．
+        # -1.0 〜 1.0 : 各ジョイントへの力 : 6次元の連続値．
         action = env.action_space.sample()
 
         # 行動を実行し，次の状態，報酬，終端か否かの情報を取得．
